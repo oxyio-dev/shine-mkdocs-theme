@@ -1,0 +1,33 @@
+{%- block toc %}
+  <!-- Table of contents (for the current page) -->
+  <div class="toc w3-hide-small w3-bar-block w3-col {% if page.toc %} s0 m2 l2{ %else %} s0 m0 l0{% endif %} w3-medium" style="border-left: 1px solid silver; position: fixed; right: 0">
+    <ul>
+    {% for toc_item in page.toc %}
+        <li>
+          <a href="{{ toc_item.url }}">
+            {{ toc_item.title }}
+          </a>
+        </li>
+        {% for toc_item in toc_item.children %}
+            <li>
+              <a href="{{ toc_item.url }}">
+                {{ toc_item.title }}
+              </a>
+              {% if toc_item.children %}
+                <ul>
+                  {% for sub_toc_item in toc_item.children %}
+                    <li>
+                      <a href="{{ sub_toc_item.url }}">
+                        {{ sub_toc_item.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+  </div>
+
+{%- endblock %}

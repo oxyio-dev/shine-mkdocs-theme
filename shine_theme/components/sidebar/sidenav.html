@@ -1,0 +1,31 @@
+{% if nav_item.title != "Index" %}
+
+  {% if nav_item.children %}
+
+    <div
+      onclick="toggleExpansionItem(this)"
+      class="sidenav-expanding-item w3-bar-item w3-button {% if nav_item.active %} active open{% else %} closed{% endif %}"
+    >
+      <span class="w3-col">
+        <div class="w3-left">
+          {{ nav_item.title }}
+        </div>
+        <div class="w3-right chevron-right"><b>&#10095;</b></div>
+      </span>
+    </div>
+
+    <div class="w3-medium w3-padding-left w3-hide{% if nav_item.active %} w3-show{% endif %}" style="padding-left: 1rem">
+      {% for nav_item in nav_item.children %}
+        {% include "components/sidebar/sidenav.html" %}
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    <div class="sidenav-item w3-bar-item w3-button single {% if nav_item.active %} active{% endif %}" onclick="window.location='{{ nav_item.url|url }}'">
+      {{ nav_item.title }}
+    </div>
+
+  {% endif %}
+
+{% endif %}

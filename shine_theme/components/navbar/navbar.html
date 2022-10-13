@@ -1,0 +1,38 @@
+<!-- Navbar -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar w3-top w3-left-align w3-large">
+  <div class="w3-bar w3-left-align w3-large w3-margin-left">
+
+    <!-- hamburger -->
+    <a
+      class="w3-bar-item w3-button w3-left w3-hide-large"
+      href="javascript:void(0)"
+      onclick="w3_open()"
+    >
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <!-- site name -->
+    <a href="/" class="w3-bar-item w3-button w3-left-align">
+      <b>
+        {{ config.site_name }}
+      </b>
+    </a>
+
+    <!-- nav links -->
+    {{ site_nav }}
+
+    <!-- search input -->
+    <div role="search" class="search w3-right w3-margin-right w3-hide-small">
+      <input
+        id="mkdocs-search-query"
+        placeholder="Search"
+        type="search"
+        class="search-input search-query ui-autocomplete-input w3-input"
+      />
+    </div>
+
+  </div>
+</div>
+

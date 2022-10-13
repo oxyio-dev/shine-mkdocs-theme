@@ -1,2 +1,4 @@
-# shien-mkdocs-theme
-Shine Mkdocs Theme
+# Shine Mkdocs Theme
+
+Theme for MkDocs to help create elegant user facing documentation.
+

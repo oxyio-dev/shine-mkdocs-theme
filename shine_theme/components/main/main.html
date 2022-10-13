@@ -1,0 +1,12 @@
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="main w3-main">
+  <div class="w3-row">
+    <div class="w3-padding w3-col {% if page.toc %} s0 m9 l9{% else %} s12{% endif %}">
+      {% include "search/results.html" %}
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    </div>
+    {% include "components/toc/toc.html" %}
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<!-- Footer -->
+<div class="footer w3-bottom w3-text-grey" style="z-index: 5;">
+  <table>
+    <tr>
+
+      <!-- left column -->
+      <td class="footer-left">
+        {% if page %}
+
+          <!-- build version -->
+          {% if page.is_homepage %}
+            <div class="version">
+              {{ build_date_utc.strftime('%Y-%m-%d') }}
+            </div>
+          {% endif %}
+
+          <!-- link to previous page -->
+          {% if page.previous_page and not page.is_homepage %}
+            <div class="page-prev w3-medium">
+              <a href="{{ page.previous_page.url|url }}" title="{{ page.previous_page.title }}">
+                &#8592; Prev
+                <br/>
+                <span class="w3-hide-small">{{ page.previous_page.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+
+        {% endif %}
+      </td>
+
+      <!-- middle column -->
+      <td class="footer-center">
+        {% if page %}
+        {% endif %}
+      </td>
+
+      <!-- right column -->
+      <td class="footer-right">
+        {% if page %}
+
+          <!-- link to next page -->
+          {% if not page.is_homepage and page.next_page %}
+            <div class="page-next w3-medium">
+              <a href="{{ page.next_page.url|url }}" title="{{ page.next_page.title }}">
+                Next &#8594;
+                <br/>
+                <span class="w3-hide-small">{{ page.next_page.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+
+          <!-- powered by -->
+          {% if page.is_homepage %}
+            <div class="poweredby">
+              Powered by
+              <a href="https://github.com/oxyio-dev/shine-mkdocs-theme" target="_blank">
+                MkDocs + Shine
+              </a>
+            </div>
+          {% endif %}
+
+        {% endif %}
+      </td>
+
+    </tr>
+  </table>
+</div>
+

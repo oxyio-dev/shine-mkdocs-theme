@@ -1,0 +1,39 @@
+.footer {
+  /* colors */
+  color: var(--footer-fg-color);
+  background: var(--footer-bg-color);
+  /* fonts */
+  font-size: 90%;
+  font-family: var(--font-family);
+  /* size */
+  height: var(--footer-height);
+}
+
+.footer table {
+  border: 0;
+  width: 100%;
+  height:100%;
+}
+
+.footer table td {
+  width: 33%;
+}
+
+.footer-left {
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  padding-right: 1rem;
+  text-align: right;
+}
+
+.footer .version,
+.footer .poweredby {
+  font-style: italic;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page and page.is_homepage %}
+    <meta name="description" content="{{ config['site_description'] }}">
+  {% endif %}
+  {% if config.site_author %}
+    <meta name="author" content="{{ config.site_author }}">
+  {% endif %}
+  {% if page and page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
+
+  <!-- title -->
+  <title>
+    {% if page and page.title and not page.is_homepage %}{{ page.title }} | {% endif %}{{ config.site_name }}
+  </title>
+
+  <!-- favicon -->
+  {% if config.site_favicon %}
+    <link rel="shortcut icon" href="{{ config.site_favicon|url }}">
+  {% else %}
+    <link rel="shortcut icon" href="{{ 'img/favicon.ico'|url }}">
+  {% endif %}
+
+  <!-- base_url (http://www.mkdocs.org/user-guide/configuration/#extra_css) -->
+  <script>var base_url = {{ base_url | tojson | safe }}</script>
+
+  <!-- external css -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+
+  <!-- theme -->
+  <link rel="stylesheet" href="{{ 'ext/w3/w3.css'|url }}">
+  <link rel="stylesheet" href="{{ 'css/variables.css'|url }}">
+  <link rel="stylesheet" href="{{ 'css/base.css'|url }}">
+  <link rel="stylesheet" href="{{ 'css/admonition.css'|url }}">
+
+  <!-- css for components -->
+  <link rel="stylesheet" href="{{ 'components/navbar/navbar.css'|url }}">
+  <link rel="stylesheet" href="{{ 'components/sidebar/sidebar.css'|url }}">
+  <link rel="stylesheet" href="{{ 'components/main/main.css'|url }}">
+  <link rel="stylesheet" href="{{ 'components/toc/toc.css'|url }}">
+  <link rel="stylesheet" href="{{ 'components/footer/footer.css'|url }}">
+
+  <!-- extra css (http://www.mkdocs.org/user-guide/configuration/#extra_css) -->
+  {% for path in config.extra_css %}
+    <link rel="stylesheet" href="{{ path|url }}">
+  {% endfor %}
+
+  <!-- scripts for components -->
+  <script src="{{ 'components/sidebar/sidebar.js'|url }}"></script>
+
+  <!-- extra_scripts (http://www.mkdocs.org/user-guide/configuration/) -->
+  {% for path in config.extra_javascript %}
+    <script defer src="{{ path|url }}" defer></script>
+  {%- endfor %}
+
+<head>
+
+<body>
+
+  {% include "components/navbar/navbar.html" %}
+  {% include "components/sidebar/sidebar.html" %}
+  {% include "components/main/main.html" %}
+  {% include "components/footer/footer.html" %}
+
+</div>
+
+</body>
+</html>

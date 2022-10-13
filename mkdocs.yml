@@ -1,0 +1,16 @@
+site_name: Shine Mkdocs Theme
+
+dev_addr: 127.0.0.1:8225
+
+theme:
+  name: null
+  custom_dir: 'shine_theme/'
+
+plugins:
+  - search
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+
+repo_url: https://github.com/oxyio-dev/shine-mkdocs-theme

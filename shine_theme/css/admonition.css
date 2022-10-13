@@ -1,0 +1,77 @@
+.admonition {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.admonition p {
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+}
+
+.admonition .admonition-title {
+  text-align: left;
+  padding: 0.5rem 0.5rem;
+}
+
+.admonition.note {
+    // color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+/* info */
+.admonition.info    { background: #e6f7ff; }
+.admonition.info    .admonition-title { color: #fff; background: #69c0ff; }
+
+/* tip */
+.admonition.tip     .admonition-title { color: #fff; background: #52c41a; }
+.admonition.tip     { background: #d9f7be; }
+
+/* warning */
+.admonition.warning { background: #ffffb8; }
+.admonition.warning .admonition-title { color: #444; background: #ffec3d; }
+
+/* danger */
+.admonition.danger  { background: #ffccc7; }
+.admonition.danger  .admonition-title { color: #fff; background: #f5222d; }
+
+/* success */
+.admonition.success { background: #d9f7be; }
+.admonition.success .admonition-title { color: #fff; background: #52c41a; }
+
+/* error */
+.admonition.error   { background: #ffccc7; }
+.admonition.error   .admonition-title { color: #fff; background: #f5222d; }
+
+/* white */
+.admonition.white   { background: #ffffff; }
+.admonition.white   .admonition-title { color: #000; background: #ffffff; }
+
+/* grey */
+.admonition.grey    { background: #f0f0f0; }
+.admonition.grey    .admonition-title { color: #444; background: #dddddd; }
+
+/* black */
+.admonition.black   { background: #000000; }
+.admonition.black > *  { color: #fff !important; }
+.admonition.black   .admonition-title { color: #fff; background: #222222; }
+
+/* red */
+.admonition.red     { background: #ffccc7; }
+.admonition.red     .admonition-title { color: #fff; background: #f5222d; }
+
+/* blue */
+.admonition.blue    { background: #e6f7ff; }
+.admonition.blue    .admonition-title { color: #fff; background: #69c0ff; }
+
+/* green */
+.admonition.green   { background: #d9f7be; }
+.admonition.green   .admonition-title { color: #fff; background: #52c41a; }
+
+/* yellow */
+.admonition.yellow { background: #ffffb8; }
+.admonition.yellow .admonition-title { color: #444; background: #ffec3d; }
+
